@@ -22,8 +22,8 @@ public class TICPalooza : MonoBehaviour
             return;
         }
 
-        campo = campo + campo_entradas;
-        platea = campo + platea_entradas;
+        campo_entradas =  campo + campo_entradas;
+        platea_entradas = platea + platea_entradas;
 
         campo = campo * 1200;
         platea = platea * 2000;
@@ -33,10 +33,9 @@ public class TICPalooza : MonoBehaviour
 
         plata_final = platea + campo;
         Debug.Log("Entonces en total ganamos " + plata_final);
-
         entradas_totales = campo_entradas + platea_entradas;
 
-        if (entradas_totales > 18300)
+        if (entradas_totales > 19300)
         {
             Debug.Log("El festival fue un éxito!");
         }
@@ -46,10 +45,10 @@ public class TICPalooza : MonoBehaviour
             Debug.Log("Debemos mejorar la convocatoria");
         };
 
-        campo_entradas = 20200 - campo_entradas;
-        platea_entradas = 16400 - platea_entradas;
+        campo_entradas = 20400 - campo_entradas;
+        platea_entradas = 16200 - platea_entradas;
 
-        if (campo_entradas == 20200)
+        if (campo_entradas == 0)
         {
             Debug.Log("Quedan " + campo_entradas + " Disponibles");
             Debug.Log("Sold Out");
@@ -61,13 +60,11 @@ public class TICPalooza : MonoBehaviour
             Debug.Log("Quedan " + platea_entradas + " Disponibles");
             Debug.Log("Sold Out");
         }
-
         else 
         {
             Debug.Log("Quedan " + platea_entradas + " Disponibles");
             Debug.Log("Quedan " + campo_entradas + " Disponibles");
         };
-
         
     }
 
